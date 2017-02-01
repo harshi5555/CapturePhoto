@@ -12,41 +12,61 @@
     tools:context="com.example.harshi.capturephoto.Main2Activity">
 
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="250dp"
         app:srcCompat="@android:drawable/picture_frame"
         android:layout_centerHorizontal="true"
         android:id="@+id/imageView"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:layout_height="250dp" />
 
     <TextView
-        android:text="TextView"
+        android:text="Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imageView"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_marginStart="107dp"
         android:layout_marginBottom="17dp"
         android:id="@+id/textView"
         android:ems="6"
-        tools:text="Description" />
+        android:gravity="center"
+        tools:text="Description"
+        android:layout_alignStart="@+id/button" />
+
+    <Button
+        android:text="send Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:id="@+id/button"
+        android:onClick="sendImage"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:inputType="textMultiLine"
         android:ems="10"
+        android:id="@+id/editText2"
         android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/editText2" />
+        android:layout_centerHorizontal="true" />
 
-    <Button
-        android:text="ADD LOCATION"
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="13dp"
-        android:id="@+id/button" />
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginStart="21dp"
+        android:id="@+id/textId"
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Customer ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textId"
+        android:layout_toStartOf="@+id/textId"
+        android:layout_marginEnd="25dp"
+        android:id="@+id/textView3" />
 
 </RelativeLayout>
