@@ -1,9 +1,15 @@
 package com.example.harshi.capturephoto;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.icu.text.SimpleDateFormat;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +17,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.InputStream;
+import java.net.URL;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     Button buttonS;
@@ -26,8 +36,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initialize();
-        InputStream is = getResources().openRawResource(R.drawable.ic_launcher);
-        bmp= BitmapFactory.decodeStream(is);
 
     }
     private void initialize(){
@@ -39,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onClick(View v) {
 
@@ -46,11 +55,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonSend:
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this,Main2Activity.class);
-                intent.putExtra("Bitmap",bmp);
+                    intent.putExtra("Bitmap",bmp);
                 startActivity(intent);
              break;
             case R.id.buttonTakePic:
                 i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                //File pictureDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+                //String pictureName = getPictureName();
+               // File imageFile = new File(pictureDirectory,pictureName);
+               // Uri pictureUri = Uri.fromFile(imageFile);
+                //i.putExtra(MediaStore.EXTRA_OUTPUT,pictureUri);
+
                 startActivityForResult(i,CAMARA_DATA);
                 break;
 
@@ -58,13 +73,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+   /* @RequiresApi(api = Build.VERSION_CODES.N)
+    private String getPictureName() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmSS");
+        String timeStamp = sdf.format(new Date());
+        return "CapturePhoto" + timeStamp + "jpg";
+    }*/
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode==RESULT_OK){
             Bundle extras = data.getExtras();
             bmp = (Bitmap) extras.get("data");
-            image.setImageBitmap(bmp);
+           image.setImageBitmap(bmp);
+
         }
+
+
+
+
+
     }
-}
+
+
+
+
+    }
+

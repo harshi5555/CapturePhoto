@@ -1,8 +1,12 @@
 package com.example.harshi.capturephoto;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +15,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.net.URL;
 
 public class Main2Activity extends AppCompatActivity {
     Bitmap bmp;
@@ -22,12 +32,20 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         bmp = (Bitmap) this.getIntent().getParcelableExtra("Bitmap");
+        try{
+        saveBitmap(bmp);
+        }catch(Exception e)
+        {
+
+        }
         setContentView(R.layout.activity_main2);
         ImageView viewBitmap = (ImageView) findViewById(R.id.imageView);
         viewBitmap.setImageBitmap(bmp);
 
 
-         Button sendEmail = (Button) findViewById(R.id.button);
+
+
+        Button sendEmail = (Button) findViewById(R.id.button);
         sendEmail.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -51,12 +69,22 @@ public class Main2Activity extends AppCompatActivity {
 
 
                             String[] to = new String[]{"harshi5555@gmail.com"};
-                String subject = (" Details for the insurance claim! \n Customer Id: " + cusId);
+                String subject = (" Details for the insurance claim! \n Customer Id: " );
                 Intent emailIntent = new Intent(Intent.ACTION_SEND);
                 emailIntent.putExtra(Intent.EXTRA_EMAIL,to);
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT,subject);
                 emailIntent.putExtra(Intent.EXTRA_TEXT,message);
-                emailIntent.setType("message/rfc822");
+                try{
+                    String path = saveBitmap(bmp).getAbsolutePath();
+                    emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" + path));
+                    //emailIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                }catch(Exception e)
+                {
+                    e.printStackTrace();
+                }
+                emailIntent.setType("image/jpeg");
+
+
                 startActivity(Intent.createChooser(emailIntent,"Email"));
                 Toast.makeText(getApplicationContext(), "send", Toast.LENGTH_LONG).show();
                             }
@@ -70,7 +98,33 @@ public class Main2Activity extends AppCompatActivity {
 
     }
 
+    private File saveBitmap(Bitmap bitmap) throws Exception{
+        File file = null;
+        if (bitmap != null) {
+            file = File.createTempFile("image",".bmp",getExternalCacheDir());
+                try {
+                FileOutputStream outputStream = null;
+                try {
+                    outputStream = new FileOutputStream(file.getAbsoluteFile());
 
+                    bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    try {
+                        if (outputStream != null) {
+                            outputStream.close();
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return file;
+    }
 
 
     }
