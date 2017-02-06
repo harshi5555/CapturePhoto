@@ -9,27 +9,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.harshi.capturephoto.Main2Activity">
-
-    <ImageView
-        android:layout_width="250dp"
-        app:srcCompat="@android:drawable/picture_frame"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/imageView"
-        android:layout_alignParentTop="true"
-        android:layout_height="250dp" />
-
-    <TextView
-        android:text="Description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView"
-        android:layout_marginBottom="17dp"
-        android:id="@+id/textView"
-        android:ems="6"
-        android:gravity="center"
-        tools:text="Description"
-        android:layout_alignStart="@+id/button" />
+    tools:context="com.example.harshi.capturephoto.Main2Activity"
+    android:background="@drawable/gradient_background">
 
     <Button
         android:text="send Email"
@@ -43,30 +24,54 @@
 
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_marginStart="21dp"
         android:id="@+id/textId"
         android:layout_below="@+id/editText2"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/editText2" />
+
+    <TextView
+        android:text="Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textId"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/textView"
+        android:textColor="?android:attr/detailsElementBackground"
+        android:textSize="@dimen/activity_vertical_margin"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="Customer ID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:gravity="left"
         android:layout_alignBottom="@+id/textId"
-        android:layout_toStartOf="@+id/textId"
-        android:layout_marginEnd="25dp"
-        android:id="@+id/textView3" />
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/activity_vertical_margin"
+        android:textColor="?android:attr/detailsElementBackground" />
+
+    <ImageView
+        android:layout_width="250dp"
+        app:srcCompat="@android:drawable/picture_frame"
+        android:id="@+id/imageView"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="false"
+        android:layout_centerInParent="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

@@ -60,7 +60,7 @@ public class Main2Activity extends AppCompatActivity {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(Main2Activity.this);
                 builder.setMessage("Do you want to proceed?")
-                        .setPositiveButton("Ok",new DialogInterface.OnClickListener(){
+                        .setPositiveButton("Yes",new DialogInterface.OnClickListener(){
 
 
                             @Override
@@ -69,7 +69,7 @@ public class Main2Activity extends AppCompatActivity {
 
 
                             String[] to = new String[]{"harshi5555@gmail.com"};
-                String subject = (" Details for the insurance claim! \n Customer Id: " );
+                String subject = (" Details of the insurance claim! \n Customer Id: " + cusId);
                 Intent emailIntent = new Intent(Intent.ACTION_SEND);
                 emailIntent.putExtra(Intent.EXTRA_EMAIL,to);
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT,subject);
@@ -77,7 +77,7 @@ public class Main2Activity extends AppCompatActivity {
                 try{
                     String path = saveBitmap(bmp).getAbsolutePath();
                     emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" + path));
-                    //emailIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
                 }catch(Exception e)
                 {
                     e.printStackTrace();

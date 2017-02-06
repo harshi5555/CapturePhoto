@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button buttonCap;
     ImageView image;
     Intent i;
-    final static int CAMARA_DATA = 0;
+    final static int CAMERA_DATA = 0;
     Bitmap bmp;
 
     @Override
@@ -60,25 +60,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
              break;
             case R.id.buttonTakePic:
                 i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                //File pictureDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-                //String pictureName = getPictureName();
-               // File imageFile = new File(pictureDirectory,pictureName);
-               // Uri pictureUri = Uri.fromFile(imageFile);
-                //i.putExtra(MediaStore.EXTRA_OUTPUT,pictureUri);
 
-                startActivityForResult(i,CAMARA_DATA);
+                startActivityForResult(i,CAMERA_DATA);
                 break;
 
         }
 
     }
 
-   /* @RequiresApi(api = Build.VERSION_CODES.N)
-    private String getPictureName() {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmSS");
-        String timeStamp = sdf.format(new Date());
-        return "CapturePhoto" + timeStamp + "jpg";
-    }*/
+
 
 
     @Override
