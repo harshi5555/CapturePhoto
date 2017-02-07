@@ -44,21 +44,22 @@ public class Information extends AppCompatActivity {
 
             public void onClick(View v) {
 
-                msg = (EditText) findViewById(R.id.editText2);
-                final String message = msg.getText().toString();
 
-                id = (EditText) findViewById(R.id.textId);
-                final String cusId = id.getText().toString();
+
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(Information.this);
                 builder.setMessage("Do you want to proceed?")
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                HandleNotification hn = new HandleNotification();
+
                                 try {
+                                    HandleNotification hn = new HandleNotification();
                                     StoreImages si = new StoreImages();
-                                    startActivity(Intent.createChooser(hn.sentEmail(message, cusId, si.saveBitmap(bmp, getExternalCacheDir()).getAbsolutePath()), "Email"));
+                                    startActivity(Intent.createChooser(hn.sentEmail(((EditText) findViewById(R.id.editText2)).getText().toString(),
+                                            ((EditText) findViewById(R.id.textId)).getText().toString(),
+                                             si.saveBitmap(bmp, getExternalCacheDir()).getAbsolutePath()),
+                                             "Email"));
                                 } catch (Exception e) {
                                     e.printStackTrace();
                                 }

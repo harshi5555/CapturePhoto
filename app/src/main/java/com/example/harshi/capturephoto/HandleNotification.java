@@ -1,13 +1,9 @@
 package com.example.harshi.capturephoto;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 /**
  * Created by harshi on 07/02/17.
@@ -21,18 +17,9 @@ public class HandleNotification extends AppCompatActivity {
         emailIntent.putExtra(Intent.EXTRA_EMAIL,to);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT,subject);
         emailIntent.putExtra(Intent.EXTRA_TEXT,message);
-        //try{
-            //String path = saveBitmap(bmp).getAbsolutePath();
-            emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" + path));
-
-        //}catch(Exception e)
-        //{
-          //  e.printStackTrace();
-        //}
+        emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" + path));
         emailIntent.setType("image/jpeg");
-
         return emailIntent;
-        //startActivity(Intent.createChooser(emailIntent,"Email"));
     }
 
 
