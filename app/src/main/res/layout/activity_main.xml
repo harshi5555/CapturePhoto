@@ -22,36 +22,42 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="41dp"
         android:layout_marginBottom="57dp"
-        android:id="@+id/buttonTakePic" />
+        android:id="@+id/buttonTakePic"
+        android:background="?android:attr/colorEdgeEffect" />
 
     <Button
-        android:text="SEND"
+        android:text="NEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/buttonTakePic"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="44dp"
-        android:id="@+id/buttonSend" />
+        android:id="@+id/buttonSend"
+        android:background="?android:attr/colorEdgeEffect" />
 
-
-    <TextView
-        android:text="Please Capture Damaged Area"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/photo"
-        android:layout_marginBottom="11dp"
-        android:id="@+id/textView4"
-        android:gravity="center"
-        android:textStyle="normal|bold"
-        android:textSize="20dp"
-        android:textColor="@android:color/background_light" />
 
     <ImageView
         app:srcCompat="@android:drawable/picture_frame"
         android:id="@+id/photo"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/textView4"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Please Capture Damaged Area and press next."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:textAlignment="gravity"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColorLink="?android:attr/detailsElementBackground" />
 
 </RelativeLayout>

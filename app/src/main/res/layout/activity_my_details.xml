@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.harshi.capturephoto.MenuActivity"
+    android:background="@drawable/gradient_background">
+    <include
+
+        layout="@layout/toolbar"
+        android:id="@id/my_toolbar"
+        />
+
+    <TextView
+        android:text="Make sure your details are up to date to save valuable time if you have to make a claim."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:id="@+id/textView3"
+        android:layout_marginLeft="15dp"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="18sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editText12" />
+
+    <TextView
+        android:text="Vehicle details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView9"
+        android:layout_marginBottom="20dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_blue_bright"
+        android:gravity="center" />
+
+    <TextView
+        android:text="Full Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView9"
+        android:layout_alignLeft="@+id/textView9"
+        android:layout_alignStart="@+id/textView9"
+        android:layout_marginTop="20dp"
+        android:id="@+id/name"
+        android:textColor="@android:color/holo_blue_light" />
+
+    <TextView
+        android:text="Policy No"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fullName"
+        android:layout_alignRight="@+id/name"
+        android:layout_alignEnd="@+id/name"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignStart="@+id/name"
+        android:textColor="@android:color/holo_blue_light" />
+
+    <TextView
+        android:text="Manifactured Year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/policyNumber"
+        android:layout_marginTop="20dp"
+        android:id="@+id/year"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignStart="@+id/name"
+        android:textColor="@android:color/holo_blue_light" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/fullName"
+        android:layout_below="@+id/textView9"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/policyNumber"
+        android:layout_below="@+id/fullName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/manufactureYear"
+        android:layout_below="@+id/policyNumber"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/manufactureYear"
+        android:layout_alignLeft="@+id/year"
+        android:layout_alignStart="@+id/year"
+        android:layout_marginTop="20dp"
+        android:id="@+id/type"
+        android:textColor="@android:color/holo_blue_light" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/manufactureYear"
+        android:layout_alignLeft="@+id/manufactureYear"
+        android:layout_alignStart="@+id/manufactureYear"
+        android:id="@+id/typeId" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button2"
+        android:layout_alignLeft="@+id/type"
+        android:layout_alignStart="@+id/type"
+        android:id="@+id/textView21" />
+
+    <TextView
+        android:text="Model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/typeId"
+        android:layout_alignRight="@+id/policy"
+        android:layout_alignEnd="@+id/policy"
+        android:layout_marginTop="19dp"
+        android:layout_alignLeft="@+id/type"
+        android:layout_alignStart="@+id/type"
+        android:textColor="@android:color/holo_blue_light" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/typeId"
+        android:layout_alignLeft="@+id/typeId"
+        android:layout_alignStart="@+id/typeId"
+        android:id="@+id/model" />
+
+    <TextView
+        android:text="Vehicle Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/model"
+        android:layout_marginTop="19dp"
+        android:layout_alignRight="@+id/textView9"
+        android:layout_alignEnd="@+id/textView9"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_alignLeft="@+id/textView13"
+        android:layout_alignStart="@+id/textView13" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignBottom="@+id/vehNo"
+        android:layout_alignLeft="@+id/model"
+        android:layout_alignStart="@+id/model"
+        android:id="@+id/editText10" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/model"
+        android:layout_alignLeft="@+id/model"
+        android:layout_alignStart="@+id/model"
+        android:id="@+id/vehicleNumber" />
+
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save"
+        android:background="?android:attr/colorEdgeEffect"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/vehicleNumber"
+        android:layout_toRightOf="@+id/year"
+        android:layout_toEndOf="@+id/year"
+        android:gravity="center" />
+
+
+</RelativeLayout>

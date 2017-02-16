@@ -29,12 +29,12 @@ public class CaptureCamera extends AppCompatActivity implements View.OnClickList
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("My Image");
+            myToolbar.setLogo(R.drawable.logo);
+        }
 
-        getSupportActionBar().setTitle("Capture Image");
-        myToolbar.setLogo(R.drawable.logo);
     }
-
-
 
     private void initialize(){
         buttonS =(Button)findViewById(R.id.buttonSend);

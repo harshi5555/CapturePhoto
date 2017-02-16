@@ -15,9 +15,6 @@ import android.support.v7.app.AppCompatActivity;
 
 @RequiresApi(api = Build.VERSION_CODES.N)
 public class HandleNotification extends AppCompatActivity {
-    Calendar c = Calendar.getInstance();
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    String strDate = sdf.format(c.getTime());
 
     public Intent sentEmail(String message,String path){
         String[] to = new String[]{"harshi5555@gmail.com"};
@@ -25,7 +22,7 @@ public class HandleNotification extends AppCompatActivity {
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.putExtra(Intent.EXTRA_EMAIL,to);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT,subject);
-        emailIntent.putExtra(Intent.EXTRA_TEXT,message +"\n"+ "Sent date & time :  "+strDate );
+        emailIntent.putExtra(Intent.EXTRA_TEXT,message  );
 
         emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" + path));
         emailIntent.setType("image/jpeg");

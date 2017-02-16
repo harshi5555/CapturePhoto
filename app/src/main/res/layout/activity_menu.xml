@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_menu"
     android:layout_width="match_parent"
@@ -7,18 +8,62 @@
 
     tools:context="com.example.harshi.capturephoto.MenuActivity"
     android:background="@drawable/gradient_background">
-
-
-
     <include
 
         layout="@layout/toolbar"
         android:id="@id/my_toolbar"
         />
-    <com.hitomi.cmlibrary.CircleMenu
-        android:id="@+id/circle_menu"
+
+
+    <Button
+        android:text="accident claim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
+        android:layout_below="@+id/imageView5"
+        android:layout_marginTop="52dp"
+        android:id="@+id/inClaim"
+        android:onClick="claim"
+        android:background="?android:attr/colorEdgeEffect"
+        android:layout_alignLeft="@+id/stolen"
+        android:layout_alignStart="@+id/stolen"
+        android:layout_alignRight="@+id/stolen"
+        android:layout_alignEnd="@+id/stolen" />
+
+    <Button
+        android:text="Claim a stolen or burnt vehicle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inClaim"
+        android:layout_marginTop="22dp"
+        android:id="@+id/stolen"
+        android:background="?android:attr/colorEdgeEffect"
+        android:layout_alignLeft="@+id/myDetail"
+        android:layout_alignStart="@+id/myDetail"
+        android:layout_alignRight="@+id/myDetail"
+        android:layout_alignEnd="@+id/myDetail" />
+
+    <Button
+        android:text="manage my details "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:id="@+id/myDetail"
+        android:background="?android:attr/colorEdgeEffect"
+        android:layout_below="@+id/stolen"
+        android:layout_alignLeft="@+id/imageView5"
+        android:layout_alignStart="@+id/imageView5"
+        android:layout_alignRight="@+id/imageView5"
+        android:layout_alignEnd="@+id/imageView5" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/image"
+        android:id="@+id/imageView5"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
+
+

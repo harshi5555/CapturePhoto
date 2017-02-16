@@ -14,11 +14,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CaptureCamera">
-
-        </activity>
-        <activity android:name=".Information" />
-        <activity android:name=".Main3Activity" />
         <activity android:name=".MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CaptureCamera" />
+        <activity android:name=".Information" />
+        <activity android:name=".Main3Activity" />
+        <activity android:name=".Instruction" />
+        <activity android:name=".MyDetails"></activity>
     </application>
 
 </manifest>

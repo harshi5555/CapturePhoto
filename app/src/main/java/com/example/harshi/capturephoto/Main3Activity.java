@@ -16,10 +16,10 @@ public class Main3Activity extends AppCompatActivity {
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-
-        getSupportActionBar().setTitle("LLL");
-        myToolbar.setLogo(R.drawable.logo);
-
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("Alianz Insurance");
+            myToolbar.setLogo(R.drawable.logo);
+        }
 
         Button btn = (Button)findViewById(R.id.home);
         btn.setOnClickListener(new View.OnClickListener() {
