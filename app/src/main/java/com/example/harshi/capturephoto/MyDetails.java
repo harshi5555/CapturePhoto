@@ -33,7 +33,7 @@ public class MyDetails extends AppCompatActivity {
         String tex3 = te3.getText().toString();
         te4 = (EditText) findViewById(R.id.typeId);
         String tex4 = te4.getText().toString();
-        te5 = (EditText) findViewById(R.id.);
+        te5 = (EditText) findViewById(R.id.model);
         String tex5 = te5.getText().toString();
         te6 = (EditText) findViewById(R.id.vehicleNumber);
         String tex6 = te6.getText().toString();
