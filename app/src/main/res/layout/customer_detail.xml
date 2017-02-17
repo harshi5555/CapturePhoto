@@ -7,27 +7,10 @@
 
     tools:context="com.example.harshi.capturephoto.MenuActivity"
     android:background="@drawable/gradient_background">
-    <include
-
-        layout="@layout/toolbar"
-        android:id="@id/my_toolbar"
-        />
-
-    <TextView
-        android:text="Make sure your details are up to date to save valuable time if you have to make a claim."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/my_toolbar"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:id="@+id/textView3"
-        android:layout_marginLeft="15dp"
-        android:textColor="@android:color/holo_blue_bright"
-        android:textSize="18sp" />
 
 
     <TextView
-        android:text="Vehicle details"
+        android:text="@string/vehicle_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
@@ -35,7 +18,7 @@
         android:layout_alignStart="@+id/textView3"
         android:layout_marginLeft="17dp"
         android:layout_marginStart="17dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="100dp"
         android:id="@+id/textView9"
         android:layout_marginBottom="20dp"
         android:textSize="16sp"
@@ -43,7 +26,7 @@
         android:gravity="center" />
 
     <TextView
-        android:text="Full Name"
+        android:text="@string/full_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView9"
@@ -54,7 +37,7 @@
         android:textColor="@android:color/holo_blue_light" />
 
     <TextView
-        android:text="Policy No"
+        android:text="@string/policy_no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/fullName"
@@ -67,7 +50,7 @@
         android:id="@+id/policy" />
 
     <TextView
-        android:text="Manifactured Year"
+        android:text="@string/manifactured_year"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/policyNumber"
@@ -82,33 +65,14 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/fullName"
-        android:layout_below="@+id/textView9"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/policyNumber"
-        android:layout_below="@+id/fullName"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
+        android:focusable="false"
         android:id="@+id/manufactureYear"
         android:layout_below="@+id/policyNumber"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:text="Type"
+        android:text="@string/type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/manufactureYear"
@@ -123,13 +87,14 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
+        android:focusable="false"
         android:layout_below="@+id/manufactureYear"
         android:layout_alignLeft="@+id/manufactureYear"
         android:layout_alignStart="@+id/manufactureYear"
         android:id="@+id/typeId" />
 
     <TextView
-        android:text="TextView"
+        android:text="@string/textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/button2"
@@ -138,30 +103,20 @@
         android:id="@+id/textView21" />
 
     <TextView
-        android:text="Model"
+        android:text="@string/model"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/typeId"
         android:layout_alignRight="@+id/policy"
         android:layout_alignEnd="@+id/policy"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="20dp"
         android:layout_alignLeft="@+id/type"
         android:layout_alignStart="@+id/type"
         android:textColor="@android:color/holo_blue_light"
         android:id="@+id/mod" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/typeId"
-        android:layout_alignLeft="@+id/typeId"
-        android:layout_alignStart="@+id/typeId"
-        android:id="@+id/model" />
-
     <TextView
-        android:text="Vehicle Number"
+        android:text="@string/vehicle_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/model"
@@ -173,29 +128,57 @@
         android:layout_alignStart="@+id/textView13"
         android:id="@+id/vehNo" />
 
+    <EditText
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/fullName"
+        android:layout_below="@+id/textView9"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_below="@+id/model"
-        android:layout_alignLeft="@+id/model"
-        android:layout_alignStart="@+id/model"
-        android:id="@+id/vehicleNumber" />
+        android:id="@+id/vehicleNumber"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/model" />
 
-    <Button
-        android:text="Save"
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/save"
-        android:background="?android:attr/colorEdgeEffect"
-        android:layout_marginTop="14dp"
-        android:layout_below="@+id/vehicleNumber"
-        android:layout_toRightOf="@+id/year"
-        android:layout_toEndOf="@+id/year"
-        android:gravity="center"
-        android:onClick="onClick" />
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:focusable="false"
+        android:id="@+id/model"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/typeId"
+        android:layout_alignBottom="@+id/mod" />
+
+    <include
+
+        layout="@layout/toolbar"
+        android:id="@id/my_toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:focusable="false"
+        android:ems="10"
+        android:id="@+id/policyNumber"
+        android:layout_below="@+id/fullName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>

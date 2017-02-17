@@ -6,4 +6,12 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="vehicle_details">Vehicle details</string>
+    <string name="full_name">Full Name</string>
+    <string name="policy_no">Policy No</string>
+    <string name="manifactured_year">Manifactured Year</string>
+    <string name="type">Type</string>
+    <string name="textview">TextView</string>
+    <string name="model">Model</string>
+    <string name="vehicle_number">Vehicle Number</string>
 </resources>

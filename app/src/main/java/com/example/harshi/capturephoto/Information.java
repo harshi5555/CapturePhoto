@@ -18,10 +18,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import java.io.File;
+
 public class Information extends AppCompatActivity {
 
         final static int RESULT_OK = 1;
         Bitmap bmp;
+        File file;
 
     String message = null;
 
@@ -30,6 +33,14 @@ public class Information extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main2);
+
+            Calendar c = Calendar.getInstance();
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            EditText dat = (EditText) findViewById(R.id.editText5);
+            String myDate = sdf.format(c.getTime());
+            dat.setText(myDate);
+
+
 
             Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
             setSupportActionBar(myToolbar);
@@ -42,7 +53,7 @@ public class Information extends AppCompatActivity {
 
             }
 
-
+file = (File)this.getIntent().getParcelableExtra("file");
             bmp = (Bitmap) this.getIntent().getParcelableExtra("Bitmap");
 
             ImageView viewBitmap = (ImageView) findViewById(R.id.imageView);
@@ -53,7 +64,7 @@ public class Information extends AppCompatActivity {
             sendEmail.setOnClickListener(new View.OnClickListener() {
 
                 public void onClick(View v) {
-
+                    final String myDate = "";
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(Information.this);
                     builder.setMessage("Do you want to proceed?")
@@ -62,11 +73,7 @@ public class Information extends AppCompatActivity {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
 
-                                    Calendar c = Calendar.getInstance();
-                                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                                    EditText dat = (EditText) findViewById(R.id.editText5);
-                                    String myDate = sdf.format(c.getTime());
-                                    dat.setText(myDate);
+
 
 
                                     EditText policy = (EditText) findViewById(R.id.editText4);
@@ -86,7 +93,7 @@ public class Information extends AppCompatActivity {
                                         StoreImages si = new StoreImages();
 
                                         startActivityForResult(Intent.createChooser(hn.sentEmail(message, si.saveBitmap(bmp, getExternalCacheDir()).getAbsolutePath()),
-                                                "Email"), 1);
+                                                      "Email"), 1);
                                     } catch (Exception e) {
                                         e.printStackTrace();
                                     }

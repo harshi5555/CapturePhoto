@@ -1,10 +1,12 @@
 package com.example.harshi.capturephoto;
 
 import android.graphics.Bitmap;
+import android.util.JsonWriter;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 
 /**
  * Created by harshi on 07/02/17.
@@ -38,4 +40,7 @@ public class StoreImages {
         }
         return file;
     }
+
+
+
 }

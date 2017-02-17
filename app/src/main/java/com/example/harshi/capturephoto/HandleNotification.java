@@ -23,7 +23,7 @@ public class HandleNotification extends AppCompatActivity {
         emailIntent.putExtra(Intent.EXTRA_EMAIL,to);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT,subject);
         emailIntent.putExtra(Intent.EXTRA_TEXT,message  );
-
+       // emailIntent.putExtra(Intent.EXTRA_TEXT,file)
         emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" + path));
         emailIntent.setType("image/jpeg");
         return emailIntent;
