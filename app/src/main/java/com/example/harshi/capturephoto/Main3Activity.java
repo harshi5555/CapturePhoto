@@ -19,6 +19,7 @@ public class Main3Activity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("Alianz Insurance");
             myToolbar.setLogo(R.drawable.logo);
+            myToolbar.setTitleTextColor(android.graphics.Color.WHITE);
         }
 
         Button btn = (Button)findViewById(R.id.home);

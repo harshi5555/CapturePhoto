@@ -12,11 +12,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import static com.example.harshi.capturephoto.R.layout.toolbar;
+
 public class CaptureCamera extends AppCompatActivity implements View.OnClickListener{
     Button buttonS;
     Button buttonCap;
     ImageView image;
     Intent i;
+    Bundle myData;
     final static int CAMERA_DATA = 0;
     Bitmap bmp;
 
@@ -26,12 +29,13 @@ public class CaptureCamera extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initialize();
-
+        myData = getIntent().getExtras();
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("My Image");
             myToolbar.setLogo(R.drawable.logo);
+            myToolbar.setTitleTextColor(android.graphics.Color.WHITE);
         }
 
     }
@@ -54,6 +58,9 @@ public class CaptureCamera extends AppCompatActivity implements View.OnClickList
                 Intent intent = new Intent();
                 intent.setClass(CaptureCamera.this,Information.class);
                     intent.putExtra("Bitmap",bmp);
+                if(myData != null){
+                intent.putExtras(myData);
+                }
                 startActivity(intent);
              break;
             case R.id.buttonTakePic:
@@ -61,6 +68,7 @@ public class CaptureCamera extends AppCompatActivity implements View.OnClickList
 
                 startActivityForResult(i,CAMERA_DATA);
                 break;
+
 
         }
 

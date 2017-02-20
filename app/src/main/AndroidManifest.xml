@@ -16,16 +16,19 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MenuActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"  />
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".CaptureCamera" />
-        <activity android:name=".Information" android:exported="true" />
+        <activity
+            android:name=".Information"
+            android:exported="true" />
         <activity android:name=".Main3Activity" />
-        <activity android:name=".CustomerDetail" />
-        <activity android:name=".MyDetails"></activity>
+        <activity android:name=".MyDetails" />
+        <activity android:name=".TheftClaim" />
+        <activity android:name=".BasicInfor"></activity>
     </application>
 
 </manifest>

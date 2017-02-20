@@ -25,7 +25,7 @@ public class Information extends AppCompatActivity {
         final static int RESULT_OK = 1;
         Bitmap bmp;
         File file;
-
+        Bundle myData;
     String message = null;
 
         @RequiresApi(api = Build.VERSION_CODES.N)
@@ -34,10 +34,14 @@ public class Information extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main2);
 
+
+            myData = getIntent().getExtras();
+
+
             Calendar c = Calendar.getInstance();
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             EditText dat = (EditText) findViewById(R.id.editText5);
-            String myDate = sdf.format(c.getTime());
+            final String myDate = sdf.format(c.getTime());
             dat.setText(myDate);
 
 
@@ -47,7 +51,7 @@ public class Information extends AppCompatActivity {
             if (getSupportActionBar() != null) {
                 getSupportActionBar().setTitle("My Claim");
                 myToolbar.setLogo(R.drawable.logo);
-
+                myToolbar.setTitleTextColor(android.graphics.Color.WHITE);
 
 
 
@@ -64,7 +68,6 @@ file = (File)this.getIntent().getParcelableExtra("file");
             sendEmail.setOnClickListener(new View.OnClickListener() {
 
                 public void onClick(View v) {
-                    final String myDate = "";
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(Information.this);
                     builder.setMessage("Do you want to proceed?")
@@ -73,7 +76,8 @@ file = (File)this.getIntent().getParcelableExtra("file");
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
 
-
+                                    Calendar c = Calendar.getInstance();
+                                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 
                                     EditText policy = (EditText) findViewById(R.id.editText4);
@@ -85,14 +89,14 @@ file = (File)this.getIntent().getParcelableExtra("file");
                                     String discrip = description.getText().toString();
 
 
-                                    message = "Personal Number :   " + poli + "\n" + "\n" + "Date/Time   " + myDate+ "\n"  +
-                                            "\n" + "\n" + "Location of incident:   " + loc + "\n" + "\n" + "Vehicle damage details:   " + discrip;
+                                    message = "Personal Number :   " + poli + "\n" + "\n" + "Date/Time :  " + sdf.format(c.getTime())+
+                                            "\n" + "\n" + "Location of incident :   " + loc + "\n" + "\n" + "Vehicle damage details :   " + discrip;
 
                                     try {
                                         HandleNotification hn = new HandleNotification();
                                         StoreImages si = new StoreImages();
 
-                                        startActivityForResult(Intent.createChooser(hn.sentEmail(message, si.saveBitmap(bmp, getExternalCacheDir()).getAbsolutePath()),
+                                        startActivityForResult(Intent.createChooser(hn.sentEmail( myData.getString("InsuaranceUserDetails") + message, si.saveBitmap(bmp, getExternalCacheDir()).getAbsolutePath()),
                                                       "Email"), 1);
                                     } catch (Exception e) {
                                         e.printStackTrace();
@@ -115,6 +119,7 @@ file = (File)this.getIntent().getParcelableExtra("file");
             if (resultCode == RESULT_OK)
                 Log.d("test", "test");
             Intent int2 = new Intent(this, Main3Activity.class);
+
             startActivity(int2);
 
 

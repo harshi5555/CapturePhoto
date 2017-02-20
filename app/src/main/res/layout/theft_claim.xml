@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.harshi.capturephoto.MenuActivity"
+    android:background="@drawable/gradient_background">
+
+
+
+    <include
+
+        layout="@layout/toolbar"
+        android:id="@id/my_toolbar"
+        />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+
+        <TextView
+            android:text="Please fill the following field "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:id="@+id/textView14"
+            android:layout_weight="0.36"
+            android:gravity="center_horizontal"
+            android:textSize="22sp"
+            android:textStyle="normal|bold"
+            android:paddingBottom="10dp"
+            android:textColor="@android:color/holo_blue_light" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Date/Time vehicle was last seen"
+                android:id="@+id/date"
+                android:textColor="@android:color/holo_blue_light"
+                android:textColorLink="@android:color/holo_blue_light" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+
+            <EditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Place vehicle was last seen"
+                android:id="@+id/place"
+                android:textColor="@android:color/holo_blue_light"
+                 />
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <EditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Date/damage was discovered"
+                android:id="@+id/discover"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:hint="Name of last person in charge"
+                android:id="@+id/name"
+                android:textColor="@android:color/holo_blue_light" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+
+            <EditText
+                android:layout_width="366dp"
+                android:layout_height="match_parent"
+                android:inputType="textMultiLine"
+                android:hint="If known,describe how the vehicle was stolen "
+                android:id="@+id/description1"
+                android:textColor="@android:color/holo_blue_light" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:text="send Email"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:onClick="sendImage"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="?android:attr/colorEdgeEffect"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

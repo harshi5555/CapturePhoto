@@ -47,6 +47,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="88dp"
         android:id="@+id/home"
-        android:background="?android:attr/colorEdgeEffect" />
+        android:background="?android:attr/colorEdgeEffect"
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>

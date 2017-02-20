@@ -23,7 +23,10 @@
         android:layout_marginStart="41dp"
         android:layout_marginBottom="57dp"
         android:id="@+id/buttonTakePic"
-        android:background="?android:attr/colorEdgeEffect" />
+        android:background="?android:attr/colorEdgeEffect"
+        android:textColor="@android:color/white"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp" />
 
     <Button
         android:text="NEXT"
@@ -33,17 +36,17 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="44dp"
         android:id="@+id/buttonSend"
-        android:background="?android:attr/colorEdgeEffect" />
+        android:background="?android:attr/colorEdgeEffect"
+        android:textColor="@android:color/white" />
 
 
     <ImageView
         app:srcCompat="@android:drawable/picture_frame"
         android:id="@+id/photo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="26dp"
+        android:layout_width="350dp"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/textView4"
-        android:layout_centerHorizontal="true" />
+        android:layout_height="300dp" />
 
     <TextView
         android:text="Please Capture Damaged Area and press next."
