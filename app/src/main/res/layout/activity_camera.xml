@@ -54,13 +54,15 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView4"
         android:gravity="center"
-        android:textSize="20dp"
+        style="@android:style/TextAppearance.Medium"
         android:textColor="@android:color/holo_blue_bright"
         android:textAlignment="gravity"
         android:layout_marginTop="30dp"
         android:layout_below="@+id/my_toolbar"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:textColorLink="?android:attr/detailsElementBackground" />
+        android:textColorLink="?android:attr/detailsElementBackground"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp" />
 
 </RelativeLayout>

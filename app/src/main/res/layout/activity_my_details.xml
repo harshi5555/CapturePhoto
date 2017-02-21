@@ -9,6 +9,10 @@
 
     tools:context="com.example.harshi.capturephoto.MenuActivity"
     android:background="@drawable/gradient_background">
+
+
+
+
     <include
 
         layout="@layout/toolbar"
@@ -21,11 +25,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/my_toolbar"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/textView3"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="16dp"
         android:textColor="@android:color/holo_blue_bright"
-        android:textSize="18sp" />
+        style="@android:style/TextAppearance.Medium"
+        android:layout_marginRight="16dp" />
 
 
     <TextView
@@ -33,16 +38,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_marginLeft="17dp"
-        android:layout_marginStart="17dp"
         android:layout_marginTop="30dp"
         android:id="@+id/textView9"
         android:layout_marginBottom="20dp"
         android:textSize="16sp"
         android:textColor="@android:color/holo_blue_bright"
-        android:gravity="center" />
+        android:gravity="center"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
 
     <TextView
         android:text="Full Name"
@@ -138,7 +141,7 @@
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button2"
+
         android:layout_alignLeft="@+id/type"
         android:layout_alignStart="@+id/type"
         android:id="@+id/textView21" />
@@ -176,9 +179,9 @@
         android:layout_alignRight="@+id/textView9"
         android:layout_alignEnd="@+id/textView9"
         android:textColor="@android:color/holo_blue_light"
-        android:layout_alignLeft="@+id/textView13"
-        android:layout_alignStart="@+id/textView13"
-        android:id="@+id/vehNo" />
+        android:id="@+id/vehNo"
+        android:layout_alignLeft="@+id/mod"
+        android:layout_alignStart="@+id/mod" />
 
 
     <EditText
@@ -198,13 +201,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/save"
         android:background="?android:attr/colorEdgeEffect"
-        android:gravity="center"
         android:onClick="onClick"
-        android:layout_marginBottom="11dp"
+        android:layout_marginBottom="30dp"
         android:textColor="@android:color/white"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/year"
-        android:layout_toEndOf="@+id/year" />
+        android:gravity="center_vertical|center_horizontal|center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
 
 
 </RelativeLayout>

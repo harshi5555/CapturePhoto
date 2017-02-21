@@ -21,9 +21,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp"
         android:orientation="vertical"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
 
 
         <TextView
@@ -124,7 +126,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/button"
-            android:onClick="sendImage"
+            android:onClick="onClick (MenuActivity)"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:background="?android:attr/colorEdgeEffect"

@@ -26,6 +26,8 @@ import static android.content.ContentValues.TAG;
 public class MyLocationListener implements LocationListener {
 
     String s=null;
+
+
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onLocationChanged(Location location) {
@@ -66,6 +68,7 @@ public class MyLocationListener implements LocationListener {
 
 
  public String getLocation(){
+
      return s;
  }
 

@@ -17,7 +17,7 @@ public class LastPage extends AppCompatActivity {
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Alianz Insurance");
+            getSupportActionBar().setTitle("EasyClaim");
             myToolbar.setLogo(R.drawable.logo);
             myToolbar.setTitleTextColor(android.graphics.Color.WHITE);
         }

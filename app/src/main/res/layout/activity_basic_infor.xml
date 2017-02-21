@@ -4,7 +4,6 @@
     android:id="@+id/activity_basic_infor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context="com.example.harshi.capturephoto.BasicInfor"
     android:background="@drawable/gradient_background">
 
@@ -15,9 +14,15 @@
         layout="@layout/toolbar"
         android:id="@id/my_toolbar"
         />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="4dp">
 
+</LinearLayout>
     <TextView
-        android:text="Well come to the Alianz Insurance Company"
+        android:text="Wellcome to the EasyClaim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/my_toolbar"
@@ -36,12 +41,12 @@ If you are unable to report the accident within two days, report it as soon as p
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView6"
-        android:layout_alignLeft="@+id/textView6"
-        android:layout_alignStart="@+id/textView6"
         android:layout_marginTop="24dp"
         android:id="@+id/textView8"
         android:textAlignment="gravity"
-        android:textColor="@android:color/holo_blue_light" />
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp" />
 
     <TextView
         android:text="Make sure your details are up to date to save valuable time if you have to make a claim.
@@ -49,12 +54,13 @@ Use the “Accident Claim” button on this App to guide you through all the vit
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView10"
-        android:layout_alignLeft="@+id/textView10"
-        android:layout_alignStart="@+id/textView10"
         android:layout_marginTop="18dp"
         android:id="@+id/textView11"
         android:textColor="@android:color/holo_blue_light"
-        android:textAlignment="gravity" />
+        android:textAlignment="gravity"
+        android:layout_marginRight="15dp"
+        android:layout_alignLeft="@+id/textView10"
+        android:layout_alignStart="@+id/textView10" />
 
     <TextView
         android:text="What information should I get if I’m in an accident?"
@@ -80,7 +86,9 @@ Use the “Accident Claim” button on this App to guide you through all the vit
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:textAlignment="gravity"
-        android:layout_marginLeft="5dp"
-        android:textColor="@android:color/holo_blue_dark" />
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_marginRight="15dp"
+        android:layout_alignLeft="@+id/textView8"
+        android:layout_alignStart="@+id/textView8" />
 
 </RelativeLayout>

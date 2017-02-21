@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main3"
     android:layout_width="match_parent"
@@ -14,40 +15,70 @@
         android:id="@id/my_toolbar"
         />
 
-    <TextView
-        android:text="Your clam has been successfully submitted!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="117dp"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/my_toolbar"
-        android:layout_centerHorizontal="true"
-        android:textSize="18sp"
-        android:textColor="@android:color/holo_blue_bright"
-        android:layout_marginLeft="15dp" />
-
-    <TextView
-        android:text="You will receive a confirmation message soon with updates."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:id="@+id/textView7"
-        android:gravity="center"
-        android:textColor="@android:color/holo_blue_bright"
-        android:textSize="18sp"
-        android:layout_marginLeft="15dp" />
-
     <Button
         android:text="Home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView7"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="60dp"
         android:id="@+id/home"
         android:background="?android:attr/colorEdgeEffect"
         android:textColor="@android:color/white" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/images"
+        android:id="@+id/imageView2"
+        android:layout_above="@+id/textView7"
+        android:layout_marginBottom="14dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+
+        android:layout_below="@+id/my_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="232dp"
+        android:id="@+id/textView2"
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_blue_bright"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Your clam has been successfully submitted!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:id="@+id/textView12"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_blue_bright" />
+
+    <TextView
+        android:text="You will receive a confirmation message soon with updates."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:id="@+id/textView7"
+        android:gravity="center"
+        android:textColor="@android:color/holo_blue_bright"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
 
 </RelativeLayout>

@@ -48,13 +48,13 @@
 
 
             <TextView
-                android:text="Please fill the following field "
+                android:text="Please fill the following field  "
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView14"
                 android:layout_weight="0.36"
                 android:gravity="center_horizontal"
-                android:textSize="22sp"
+                style="@android:style/TextAppearance.Medium"
                 android:paddingBottom="10dp"
                 android:textColor="@android:color/holo_blue_bright" />
 
