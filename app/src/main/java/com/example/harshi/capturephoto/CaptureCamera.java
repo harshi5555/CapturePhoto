@@ -12,8 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import static com.example.harshi.capturephoto.R.layout.toolbar;
-
 public class CaptureCamera extends AppCompatActivity implements View.OnClickListener{
     Button buttonS;
     Button buttonCap;
@@ -27,7 +25,7 @@ public class CaptureCamera extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_camera);
         initialize();
         myData = getIntent().getExtras();
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);

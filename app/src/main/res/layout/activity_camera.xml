@@ -55,7 +55,7 @@
         android:id="@+id/textView4"
         android:gravity="center"
         android:textSize="20dp"
-        android:textColor="@android:color/holo_blue_light"
+        android:textColor="@android:color/holo_blue_bright"
         android:textAlignment="gravity"
         android:layout_marginTop="30dp"
         android:layout_below="@+id/my_toolbar"

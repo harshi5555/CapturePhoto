@@ -1,10 +1,15 @@
 package com.example.harshi.capturephoto;
 
+import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.icu.text.SimpleDateFormat;
 import android.icu.util.Calendar;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
@@ -20,25 +25,25 @@ import android.widget.ImageView;
 
 import java.io.File;
 
-public class Information extends AppCompatActivity {
+public class Information extends AppCompatActivity  {
 
         final static int RESULT_OK = 1;
         Bitmap bmp;
         File file;
         Bundle myData;
     String message = null;
-
+    Calendar c;
         @RequiresApi(api = Build.VERSION_CODES.N)
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main2);
+            setContentView(R.layout.activity_information);
 
 
             myData = getIntent().getExtras();
 
 
-            Calendar c = Calendar.getInstance();
+            c = Calendar.getInstance();
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             EditText dat = (EditText) findViewById(R.id.editText5);
             final String myDate = sdf.format(c.getTime());
@@ -88,15 +93,25 @@ file = (File)this.getIntent().getParcelableExtra("file");
                                     EditText description = (EditText) findViewById(R.id.description);
                                     String discrip = description.getText().toString();
 
+                                    if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                                            && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                                        LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+                                        LocationListener locationListener = new MyLocationListener();
+                                        locationManager.requestLocationUpdates( LocationManager.GPS_PROVIDER, 5000, 10, locationListener);
 
-                                    message = "Personal Number :   " + poli + "\n" + "\n" + "Date/Time :  " + sdf.format(c.getTime())+
+
+                                    }
+
+
+
+                                    message =    "\n" +"\n"+"Personal Number :   " + poli + "\n" + "\n" + "Date/Time :  " + sdf.format(c.getTime())+
                                             "\n" + "\n" + "Location of incident :   " + loc + "\n" + "\n" + "Vehicle damage details :   " + discrip;
 
                                     try {
                                         HandleNotification hn = new HandleNotification();
                                         StoreImages si = new StoreImages();
 
-                                        startActivityForResult(Intent.createChooser(hn.sentEmail( myData.getString("InsuaranceUserDetails") + message, si.saveBitmap(bmp, getExternalCacheDir()).getAbsolutePath()),
+                                        startActivityForResult(Intent.createChooser(hn.sentEmail("       Customers' Details"+ "\n" + "\n"+  myData.getString("InsuaranceUserDetails") +"\n" + "\n"+ "         Customers' claim" + message, si.saveBitmap(bmp, getExternalCacheDir()).getAbsolutePath()),
                                                       "Email"), 1);
                                     } catch (Exception e) {
                                         e.printStackTrace();
@@ -118,7 +133,7 @@ file = (File)this.getIntent().getParcelableExtra("file");
         protected void onActivityResult(int requestCode, int resultCode, Intent data) {
             if (resultCode == RESULT_OK)
                 Log.d("test", "test");
-            Intent int2 = new Intent(this, Main3Activity.class);
+            Intent int2 = new Intent(this, LastPage.class);
 
             startActivity(int2);
 

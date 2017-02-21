@@ -15,4 +15,72 @@
         layout="@layout/toolbar"
         android:id="@id/my_toolbar"
         />
+
+    <TextView
+        android:text="Well come to the Alianz Insurance Company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:id="@+id/textView"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textAlignment="gravity" />
+
+    <TextView
+        android:text="When you are involved in an auto accident involving injury or property damage, you need to report it to your  insurance company as soon as possible, regardless of who is at fault.
+
+If you are unable to report the accident within two days, report it as soon as possible after that. If you don’t report your accident within a reasonable amount of time, your insurance company may not have to honour your claim."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView6"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_marginTop="24dp"
+        android:id="@+id/textView8"
+        android:textAlignment="gravity"
+        android:textColor="@android:color/holo_blue_light" />
+
+    <TextView
+        android:text="Make sure your details are up to date to save valuable time if you have to make a claim.
+Use the “Accident Claim” button on this App to guide you through all the vital information to photographs to capture at the accident scene and fill all the requirements has been provided and email us."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView10"
+        android:layout_alignLeft="@+id/textView10"
+        android:layout_alignStart="@+id/textView10"
+        android:layout_marginTop="18dp"
+        android:id="@+id/textView11"
+        android:textColor="@android:color/holo_blue_light"
+        android:textAlignment="gravity" />
+
+    <TextView
+        android:text="What information should I get if I’m in an accident?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/textView10"
+        android:layout_below="@+id/textView8"
+        android:layout_alignLeft="@+id/textView8"
+        android:layout_alignStart="@+id/textView8"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        android:textAlignment="gravity" />
+
+    <TextView
+        android:text="Report the Accident to Insurance Company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:id="@+id/textView6"
+        android:textSize="18sp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="gravity"
+        android:layout_marginLeft="5dp"
+        android:textColor="@android:color/holo_blue_dark" />
+
 </RelativeLayout>

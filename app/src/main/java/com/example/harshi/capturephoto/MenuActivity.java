@@ -90,7 +90,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
                     myData = getIntent().getExtras();
                     Intent myIntent = new Intent(MenuActivity.this, TheftClaim.class);
                     if(myData != null){
-                        myIntent.putExtras(myData);
+                        final Intent intent = myIntent.putExtras(myData);
 
                     }
                     startActivity(myIntent);

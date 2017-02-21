@@ -7,12 +7,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-public class Main3Activity extends AppCompatActivity {
+public class LastPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_last);
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
@@ -26,7 +26,7 @@ public class Main3Activity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent int3 = new Intent(Main3Activity.this,MenuActivity.class);
+                Intent int3 = new Intent(LastPage.this,MenuActivity.class);
                 startActivity(int3);
             }
         });

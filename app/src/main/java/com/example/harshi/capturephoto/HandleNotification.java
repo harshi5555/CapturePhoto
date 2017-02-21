@@ -26,28 +26,7 @@ public class HandleNotification extends AppCompatActivity {
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.putExtra(Intent.EXTRA_EMAIL,to);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT,subject);
-        //emailIntent.putExtra(Intent.EXTRA_TEXT,message  );
-       // emailIntent.putExtra(Intent.EXTRA_TEXT,file)
         emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" + path));
-        String line = null, input="";
-        try
-        {
-            FileInputStream fis = openFileInput("hello_file");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
-
-            while ((line = reader.readLine()) != null)
-                input += line;
-            reader.close();
-            fis.close();
-            //toast("File successfully loaded.");
-            //return input;
-        }
-        catch (Exception ex)
-        {
-            //toast("Error loading file: " + ex.getLocalizedMessage());
-            //return "";
-        }
-        emailIntent.putExtra(Intent.EXTRA_TEXT,message + line );
         emailIntent.setType("image/jpeg");
         return emailIntent;
     }

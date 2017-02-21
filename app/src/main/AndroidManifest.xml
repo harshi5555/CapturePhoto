@@ -3,10 +3,13 @@
     package="com.example.harshi.capturephoto">
 
     <uses-feature android:name="android.hardware.camera2" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -25,7 +28,7 @@
         <activity
             android:name=".Information"
             android:exported="true" />
-        <activity android:name=".Main3Activity" />
+        <activity android:name=".LastPage" />
         <activity android:name=".MyDetails" />
         <activity android:name=".TheftClaim" />
         <activity android:name=".BasicInfor"></activity>

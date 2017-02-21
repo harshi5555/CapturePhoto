@@ -68,7 +68,7 @@ public class MyDetails extends AppCompatActivity implements View.OnClickListener
                             public void onClick(DialogInterface dialog, int which) {
                                  Bundle myData = new Bundle();
                                 save = (Button) findViewById(R.id.save);
-                                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                                Intent intent = new Intent(MyDetails.this,MenuActivity.class);
 
 
                                 //Inserts a String value into the mapping of this Bundle
@@ -77,7 +77,7 @@ public class MyDetails extends AppCompatActivity implements View.OnClickListener
                                 save = (Button) findViewById(R.id.save);
                                 String concatInfor = "Full Name : "         + te1.getText().toString() + "\n" +
                                                      "Policy Number  : "    + te2.getText().toString() + "\n" +
-                                                     "Manfuacturer No  : "  + te3.getText().toString() + "\n" +
+                                                     "Manufacture year  : "  + te3.getText().toString() + "\n" +
                                                      "Type   : "            + te4.getText().toString() + "\n" +
                                                      "Model  : "            + te5.getText().toString() + "\n" +
                                                      "Vehicle Number  : "   + te6.getText().toString() ;
@@ -86,7 +86,7 @@ public class MyDetails extends AppCompatActivity implements View.OnClickListener
 
                                 startActivity(intent);
 
-                                // writeToFile("hello");
+
                             }
                         })
 
