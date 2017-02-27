@@ -19,6 +19,8 @@ import java.io.InputStreamReader;
 
 @RequiresApi(api = Build.VERSION_CODES.N)
 public class HandleNotification extends AppCompatActivity {
+    String claim;
+
 
     public Intent sentEmail(String message,String path){
         String[] to = new String[]{"harshi5555@gmail.com"};
@@ -34,6 +36,7 @@ public class HandleNotification extends AppCompatActivity {
 
 
     public Intent sentEmail(String claim){
+        this.claim=claim;
         String[] to = new String[]{"harshi5555@gmail.com"};
         String subject = (" Details of the accident claim!");
         Intent emailIntent = new Intent(Intent.ACTION_SEND);

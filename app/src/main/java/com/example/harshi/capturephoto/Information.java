@@ -6,8 +6,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.icu.text.SimpleDateFormat;
-import android.icu.util.Calendar;
+//import android.icu.text.SimpleDateFormat;
+
+//import android.icu.util.Calendar;
+import java.util.Calendar;
+
 import android.os.Build;
 import android.provider.Settings;
 import android.support.annotation.RequiresApi;
@@ -27,6 +30,7 @@ import android.widget.ImageView;
 
 
 import java.io.File;
+import java.util.Date;
 
 public class Information extends AppCompatActivity  {
 
@@ -34,6 +38,7 @@ public class Information extends AppCompatActivity  {
         Bitmap bmp;
         File file;
         Bundle myData;
+        Date d;
 
     String message = null;
     Calendar c;
@@ -48,11 +53,11 @@ public class Information extends AppCompatActivity  {
 
 
             c = Calendar.getInstance();
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            EditText dat = (EditText) findViewById(R.id.editText5);
-            final String myDate = sdf.format(c.getTime());
-            dat.setText(myDate);
+            d = new Date();
 
+            EditText date = (EditText) findViewById(R.id.editText5);
+            final String myDate = d.toString();
+            date.setText(myDate);
 
             Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
             setSupportActionBar(myToolbar);
@@ -76,7 +81,7 @@ file = (File)this.getIntent().getParcelableExtra("file");
             sendEmail.setOnClickListener(new View.OnClickListener() {
 
                 public void onClick(View v) {
-
+               final String d ="null";
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(Information.this);
                     builder.setMessage("Do you want to proceed?")
@@ -86,7 +91,6 @@ file = (File)this.getIntent().getParcelableExtra("file");
                                 public void onClick(DialogInterface dialog, int which) {
 
                                     Calendar c = Calendar.getInstance();
-                                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 
                                     EditText policy = (EditText) findViewById(R.id.editText4);
@@ -100,7 +104,7 @@ file = (File)this.getIntent().getParcelableExtra("file");
 
 
 
-                                    message =    "\n" +"\n"+"Personal Number :   " + poli + "\n" + "\n" + "Date/Time :  " + sdf.format(c.getTime())+
+                                    message =    "\n" +"\n"+"Personal Number :   " + poli + "\n" + "\n" + "Date/Time :  " +  d.toString()  +
                                             "\n" + "\n" + "Location of incident :   " + loc + "\n" + "\n" + "Vehicle damage details :   " + discrip;
 
                                     try {

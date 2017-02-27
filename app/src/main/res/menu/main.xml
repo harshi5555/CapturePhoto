@@ -5,7 +5,7 @@
 
 
     <item
-        android:icon="@drawable/infor"
+        android:icon="@drawable/inforne"
         app:showAsAction="always"
         android:title="@string/information"
         android:id="@+id/myicon"

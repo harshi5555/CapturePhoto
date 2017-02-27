@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"  android:layout_width="match_parent">
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.harshi.capturephoto.CaptureCamera"
+    android:background="@drawable/gradient_background">
+
+    <include
+
+        layout="@layout/toolbar"
+        android:id="@id/my_toolbar" />
+
+
+
+
+    <ImageView
+        app:srcCompat="@android:drawable/picture_frame"
+        android:id="@+id/photo"
+        android:layout_width="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView4"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:text="Please Capture Damaged Area and press next."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:gravity="center"
+        style="@android:style/TextAppearance.Medium"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textAlignment="gravity"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColorLink="?android:attr/detailsElementBackground"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp" />
+
+
+    <Button
+        android:text="TAKE PHOTO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:id="@+id/buttonTakePic"
+        android:background="?android:attr/colorEdgeEffect"
+        android:textColor="@android:color/white"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="90dp"
+        android:layout_below="@+id/photo"
+        android:layout_alignLeft="@+id/photo"
+        android:layout_alignStart="@+id/photo"
+        android:layout_marginBottom="50dp" />
+
+    <Button
+        android:text="NEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSend"
+        android:background="?android:attr/colorEdgeEffect"
+        android:textColor="@android:color/white"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_alignBaseline="@+id/buttonTakePic"
+        android:layout_alignBottom="@+id/buttonTakePic"
+        android:layout_alignRight="@+id/photo"
+        android:layout_alignEnd="@+id/photo" />
+
+</RelativeLayout>
+</ScrollView>

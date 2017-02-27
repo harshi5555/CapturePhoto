@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"  android:layout_width="match_parent">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_my_details"
@@ -182,7 +186,8 @@
         android:textColor="@android:color/holo_blue_light"
         android:id="@+id/vehNo"
         android:layout_alignLeft="@+id/mod"
-        android:layout_alignStart="@+id/mod" />
+        android:layout_alignStart="@+id/mod"
+        android:layout_marginBottom="100dp" />
 
 
     <EditText
@@ -203,13 +208,14 @@
         android:id="@+id/save"
         android:background="?android:attr/colorEdgeEffect"
         android:onClick="onClick"
-        android:layout_marginBottom="30dp"
         android:textColor="@android:color/white"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/year"
         android:gravity="center_vertical|center_horizontal|center"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp" />
+        android:foregroundGravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/vehicleNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp" />
 
 
 </RelativeLayout>
+    </ScrollView>

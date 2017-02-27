@@ -74,19 +74,19 @@ public class TheftClaim extends AppCompatActivity {
                                 EditText describe = (EditText) findViewById(R.id.description1);
                                 String descri = describe.getText().toString();
 
-                                Calendar c = Calendar.getInstance();
-                                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                                String myDate = sdf.format(c.getTime());
+                             
 
 
-                                claim = "Date/Time vehicle was last seen :   " + datTim+ "\n" + "\n" + "Place vehicle was last seen :   " +pla+
+
+
+                                claim = "\n" + "\n" + "Date/Time vehicle was last seen :   " + datTim+ "\n" + "\n" + "Place vehicle was last seen :   " +pla+
                                         "\n" + "\n" + "Date/damage was discovered :   " + discov + "\n" + "\n" + "Name of last person in charge :   " + pers+ "\n" + "\n" +
-                                        "If Known,describe how the vehicle was stolen : "+ descri + "\n" + "\n" +"Sent Date / Time :" +myDate ;
+                                        "If Known,describe how the vehicle was stolen : "+ descri + "\n" + "\n"  ;
 
                                 try {
                                     HandleNotification hn = new HandleNotification();
                                     if(myData!= null)
-                                     startActivityForResult(Intent.createChooser(hn.sentEmail( myData.getString("InsuaranceUserDetails") +  "\n" + claim),"Email"), 1);
+                                     startActivityForResult(Intent.createChooser(hn.sentEmail("       Customers' Details"+ "\n" + "\n"+ myData.getString("InsuaranceUserDetails") +  "\n"+"\n" + "\n"+ "         Customers' claim" + claim),"Email"), 1);
                                     else
                                         startActivityForResult(Intent.createChooser(hn.sentEmail(claim),"Email"), 1);
 

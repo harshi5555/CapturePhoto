@@ -61,21 +61,21 @@
                 android:paddingBottom="10dp"
                 android:textColor="@android:color/holo_blue_bright" />
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent">
-
-
-            <EditText
-                android:layout_width="match_parent"
+            <android.support.design.widget.TextInputLayout
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:hint="Personal Number"
-                android:id="@+id/editText4"
-                android:textColor="@android:color/holo_blue_light"
-                android:textColorLink="@android:color/holo_blue_light" />
+                android:layout_width="match_parent">
 
-        </android.support.design.widget.TextInputLayout>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Personal Number"
+                    android:id="@+id/editText4"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:textColorLink="@android:color/holo_blue_light" />
+
+            </android.support.design.widget.TextInputLayout>
 
 
             <android.support.design.widget.TextInputLayout
@@ -85,11 +85,11 @@
 
                 <EditText
 
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:hint="Date/Time"
-                android:id="@+id/editText5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Date/Time"
+                    android:id="@+id/editText5"
                     android:textColor="@android:color/holo_blue_light"
                     android:scrollbars="vertical" />
             </android.support.design.widget.TextInputLayout>
@@ -102,11 +102,11 @@
 
 
                 <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:hint="Location of incident"
-                android:id="@+id/editText6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:hint="Location of incident"
+                    android:id="@+id/editText6"
                     android:textColor="@android:color/holo_blue_light" />
             </android.support.design.widget.TextInputLayout>
 
@@ -117,11 +117,11 @@
 
 
                 <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="textMultiLine"
-                android:hint="Vehicle damage details "
-                android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine"
+                    android:hint="Vehicle damage details "
+                    android:id="@+id/description"
                     android:textColor="@android:color/holo_blue_light" />
             </android.support.design.widget.TextInputLayout>
 
@@ -135,10 +135,10 @@
                 android:layout_centerHorizontal="true"
                 android:background="?android:attr/colorEdgeEffect"
                 android:textColor="@android:color/white"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginLeft="80dp"
                 android:layout_marginRight="80dp"
-                android:layout_marginBottom="30dp" />
+                android:layout_marginBottom="50dp" />
         </LinearLayout>
     </ScrollView>
 

@@ -40,14 +40,6 @@
         android:textColor="@android:color/white" />
 
 
-    <ImageView
-        app:srcCompat="@android:drawable/picture_frame"
-        android:id="@+id/photo"
-        android:layout_width="350dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textView4"
-        android:layout_height="300dp" />
-
     <TextView
         android:text="Please Capture Damaged Area and press next."
         android:layout_width="match_parent"
@@ -64,5 +56,14 @@
         android:textColorLink="?android:attr/detailsElementBackground"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp" />
+
+    <ImageView
+        app:srcCompat="@android:drawable/picture_frame"
+        android:id="@+id/photo"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
