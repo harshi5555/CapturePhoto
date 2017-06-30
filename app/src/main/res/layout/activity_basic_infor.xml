@@ -36,9 +36,7 @@
         android:textAlignment="gravity" />
 
     <TextView
-        android:text="When you are involved in an auto accident involving injury or property damage, you need to report it to your  insurance company as soon as possible, regardless of who is at fault.
-
-If you are unable to report the accident within two days, report it as soon as possible after that. If you don’t report your accident within a reasonable amount of time, your insurance company may not have to honour your claim."
+        android:text="@string/when_you_are_involved_in_an_auto_accident_involving_injury_or_property_damage_you_need_to_report_it_to_your_insurance_company_as_soon_as_possible_regardless_of_who_is_at_fault_if_you_are_unable_to_report_the_accident_within_two_days_report_it_as_soon_as_possible_after_that_if_you_don_t_report_your_accident_within_a_reasonable_amount_of_time_your_insurance_company_may_not_have_to_honour_your_claim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView6"
@@ -50,8 +48,7 @@ If you are unable to report the accident within two days, report it as soon as p
         android:layout_marginLeft="16dp" />
 
     <TextView
-        android:text="Make sure your details are up to date to save valuable time if you have to make a claim.
-Use the “Accident Claim” button on this App to guide you through all the vital information to photographs to capture at the accident scene and fill all the requirements has been provided and email us."
+        android:text="@string/make_sure_your_details_are_up_to_date_to_save_valuable_time_if_you_have_to_make_a_claim_use_the_accident_claim_button_on_this_app_to_guide_you_through_all_the_vital_information_to_photographs_to_capture_at_the_accident_scene_and_fill_all_the_requirements_has_been_provided_and_email_us"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView10"
@@ -64,7 +61,7 @@ Use the “Accident Claim” button on this App to guide you through all the vit
         android:layout_alignStart="@+id/textView10" />
 
     <TextView
-        android:text="What information should I get if I’m in an accident?"
+        android:text="@string/what_information_should_i_get_if_i_m_in_an_accident"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -77,7 +74,7 @@ Use the “Accident Claim” button on this App to guide you through all the vit
         android:textAlignment="gravity" />
 
     <TextView
-        android:text="Report the Accident to Insurance Company"
+        android:text="@string/report_the_accident_to_insurance_company"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
